@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CatPhotoApp</title>
+
+  <!-- Fonts & Libraries -->
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+  <style>
+    h2 {
+      font-family: Lobster, monospace;
+    }
+
+    .thick-green-border {
+      border: 10px solid green;
+      border-radius: 50%;
+    }
+
+    body {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+  <!-- Header Row -->
+  <div class="row">
+    <div class="col-xs-8">
+      <h2 class="text-primary text-center">CatPhotoApp</h2>
+    </div>
+
+    <div class="col-xs-4 text-center">
+      <img class="img-responsive thick-green-border"
+           src="relaxing-cat.jpg"
+           alt="Cute cat">
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Main Image -->
+  <img class="img-responsive"
+       src="running-cats.jpg"
+       alt="Running cats">
+
+  <br>
+
+  <!-- Buttons -->
+  <div class="row text-center">
+    <div class="col-xs-4">
+      <button class="btn btn-primary btn-block">
+        <i class="fas fa-thumbs-up"></i> Like
+      </button>
+    </div>
+
+    <div class="col-xs-4">
+      <button class="btn btn-info btn-block">
+        <i class="fas fa-info-circle"></i> Info
+      </button>
+    </div>
+
+    <div class="col-xs-4">
+      <button class="btn btn-danger btn-block">
+        <i class="fas fa-trash"></i> Delete
+      </button>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Lists -->
+  <p>Things cats <span style="color:red;">love</span></p>
+  <ul>
+    <li>Catnip</li>
+    <li>Laser pointers</li>
+    <li>Lasagna</li>
+  </ul>
+
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>Flea treatment</li>
+    <li>Thunder</li>
+    <li>Other cats</li>
+  </ol>
+
+  <hr>
+
+  <!-- Form -->
+  <form action="https://afamoapp.glitch.me/api/submit-form" method="POST">
+
+    <!-- Indoor/Outdoor -->
+    <div class="row">
+      <div class="col-xs-6">
+        <label>
+          <input type="radio" name="environment" value="indoor"> Indoor
+        </label>
+      </div>
+
+      <div class="col-xs-6">
+        <label>
+          <input type="radio" name="environment" value="outdoor"> Outdoor
+        </label>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Personality -->
+    <div class="row">
+      <div class="col-xs-4">
+        <label><input type="checkbox" name="personality" value="loving"> Loving</label>
+      </div>
+
+      <div class="col-xs-4">
+        <label><input type="checkbox" name="personality" value="lazy"> Lazy</label>
+      </div>
+
+      <div class="col-xs-4">
+        <label><input type="checkbox" name="personality" value="crazy"> Crazy</label>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Input -->
+    <div class="row">
+      <div class="col-xs-8">
+        <input type="text" name="catUrl" class="form-control" placeholder="Cat photo URL">
+      </div>
+
+      <div class="col-xs-4">
+        <button type="submit" class="btn btn-success btn-block">
+          <i class="fas fa-paper-plane"></i> Submit
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+</div>
+
+</body>
+</html>
